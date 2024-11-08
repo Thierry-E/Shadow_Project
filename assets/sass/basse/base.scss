@@ -1,0 +1,34 @@
+/****Typographie****/
+@font-face {
+  font-family: 'Daydream';
+  src: url('../fonts/daydream_free-webfont.woff2') format('woff2'),
+    url('../fonts/daydream_free-webfont.woff') format('woff'),
+    url('../fonts/daydream_free-webfont.ttf') format('truetype'),
+    url('../fonts/daydream_free-webfont.eot') format('eot');
+  font-display: swap;
+}
+
+/* Définir la police Sergio Trendy */
+@font-face {
+  font-family: 'Sergio Trendy';
+  src: url('../fonts/sergio_trendy-webfont.woff2') format('woff2'),
+    url('../fonts/sergio_trendy-webfont.woff') format('woff'),
+    url('../fonts/sergio_trendy-webfont.ttf') format('truetype'),
+    url('../fonts/sergio_trendy-webfont.eot') format('eot');
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/****Reset****/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/****Code de base****/
+body {
+  background: url(../img/background.webp);
+}

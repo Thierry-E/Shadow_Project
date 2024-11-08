@@ -1,0 +1,16 @@
+{
+  "name": "shadow_project",
+  "version": "1.0.0",
+  "description": "Site de communication Animale.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/sass/main.scss ./assets/style/style.css",
+    "start": "live-server ./"
+  },
+  "author": "Valerie.A",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}

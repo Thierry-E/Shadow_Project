@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/****Typographie****/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+/****Variables des typographie****/
+/****Variables de couleurs****/
+/****Ombres****/
+@font-face {
+  font-family: "Daydream";
+  src: url("../fonts/daydream_free-webfont.woff2") format("woff2"), url("../fonts/daydream_free-webfont.woff") format("woff"), url("../fonts/daydream_free-webfont.ttf") format("truetype"), url("../fonts/daydream_free-webfont.eot") format("eot");
+  font-display: swap;
+}
+/* Définir la police Sergio Trendy */
+@font-face {
+  font-family: "Sergio Trendy";
+  src: url("../fonts/sergio_trendy-webfont.woff2") format("woff2"), url("../fonts/sergio_trendy-webfont.woff") format("woff"), url("../fonts/sergio_trendy-webfont.ttf") format("truetype"), url("../fonts/sergio_trendy-webfont.eot") format("eot");
+  font-display: swap;
+}
+/****Reset****/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/****Code de base****/
+body {
+  background: url(../img/background.webp);
+}
+
+/****Variables des typographie****/
+/****Variables de couleurs****/
+/****Ombres****/
+header {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #logo {
+  width: 370px;
+  padding-right: 50px;
+}
+header h1 {
+  font-family: "Daydream", "cursive";
+  font-size: 4em;
+}
+
+/****Variables des typographie****/
+/****Variables de couleurs****/
+nav {
+  background-color: #d9a7c4;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+nav .nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav_link img {
+  width: 65px;
+  padding-right: 10px;
+}
+nav .nav_link a {
+  font-family: "Sergio Trendy", "sans-serif";
+  font-size: 1.3em;
+  color: #000;
+}
+nav .nav_link a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
