@@ -26,6 +26,8 @@
 /****Code de base****/
 body {
   background: url(../img/background.webp);
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 /****Variables des typographie****/
@@ -71,7 +73,7 @@ nav .nav_link img {
 }
 nav .nav_link a {
   font-family: "Sergio Trendy", "sans-serif";
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #000;
 }
 nav .nav_link a:hover {
