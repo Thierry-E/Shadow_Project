@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/****Variables des typographie****/
+/****Variables de couleurs****/
 /****Typographie****/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 /****Variables des typographie****/
@@ -28,6 +30,28 @@ body {
   background: url(../img/background.webp);
   background-size: cover;
   background-repeat: repeat;
+}
+
+h2 {
+  font-family: "Daydream", "cursive";
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  width: 70%;
+  font-family: "Open Sans", "serif";
+  font-size: 1.2em;
+  line-height: 40px;
+  text-align: justify;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
 }
 
 /****Variables des typographie****/
