@@ -32,6 +32,7 @@ body {
   background-repeat: repeat;
 }
 
+/****Code des sections****/
 section {
   width: 100%;
   display: flex;
@@ -63,6 +64,13 @@ section {
   font-size: 1.2em;
   line-height: 40px;
   text-align: justify;
+}
+
+.welcome__posts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 header {
