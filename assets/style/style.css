@@ -149,7 +149,7 @@ header .header__title {
   margin-top: 20px;
 }
 
-nav {
+.nav {
   background-color: #d9a7c4;
   width: 100%;
   height: 100px;
@@ -160,21 +160,21 @@ nav {
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
 }
-nav .nav_link {
+.nav .nav__link {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-nav .nav_link img {
+.nav .nav__link img {
   width: 65px;
   padding-right: 10px;
 }
-nav .nav_link a {
+.nav .nav__link a {
   font-family: "Sergio Trendy", "sans-serif";
   font-size: 1.4em;
   color: #000;
 }
-nav .nav_link a:hover {
+.nav .nav__link--link_active {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
