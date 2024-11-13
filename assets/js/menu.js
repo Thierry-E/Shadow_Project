@@ -8,6 +8,17 @@ const currentPage = window.location.pathname.split('/').pop()
 
 console.log('Page actuelle:', currentPage) // Affiche la page actuelle dans la console pour déboguer
 
+// Fonction pour ajuster les chemins en fonction de l'environnement
+function adjustPathsForEnvironment() {
+  if (isGitHubPages) {
+    // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant chaque chemin de ressource
+    menuLinks.forEach((link) => {
+      const href = link.getAttribute('href')
+      link.setAttribute('href', '/Shadow_Project' + href) // Prend en compte le nom du dépôt
+    })
+  }
+}
+
 function setActiveMenuLinks() {
   /**** Ajout de la classe "nav__link--link_active" au lien correspondant à la page active ****/
   menuLinks.forEach((link) => {
