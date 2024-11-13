@@ -3,19 +3,24 @@
 
 <head <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Insertion Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--Fin insertion Fnt Awesome-->
    <link rel="stylesheet" href="./assets/style/style.css">
    <title>Shadow - Communication Animale</title>
 </head>
 
 <body>
-   <header>
+   <header class="header">
       <img src="./assets/img/logo.png" alt="Logo de Sahadow" id="logo">
-      <h1>Shadow - Communication Animale</h1>
+      <h1 class="header__title">Shadow - Communication Animale</h1>
    </header>
    <nav>
       <div class="nav_link">
          <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
-         <a href="#accueil">Accueil</a>
+         <a href="./index.html">Accueil</a>
       </div>
       <div class="nav_link">
          <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
@@ -38,24 +43,32 @@
          <a href="#">Contact</a>
       </div>
    </nav>
-   <section id="accueil">
-      <h2>Bienvenue</h2>
-      <p>Je vous invite à découvrir un univers fascinant où l'échange avec nos gardiens va bien au-delà des mots.
-         La communication avec nos gardiens permet de créer un lien profond et harmonieux, en écoutant et en comprenant
-         leurs
-         besoins, leurs émotions et leurs pensées. À travers des techniques intuitives et des méthodes respectueuses,
-         nous vous
-         offrons l'opportunité de renforcer cette relation, d'approfondir votre compréhension mutuelle et de favoriser
-         un
-         bien-être partagé. Que vous soyez déjà en contact avec vos gardiens ou simplement curieux, ce site est un
-         espace
-         d'apprentissage et de partage pour explorer l'art de la communication non verbale et émotionnelle entre
-         l'humain et ses
-         gardiens.</p>
+   <section>
+      <article class="welcome">
+         <h2 class="welcome__title">Bienvenue</h2>
+         <p class="welcome__text">Je vous invite à découvrir un univers fascinant où l'échange avec nos animaux va bien
+            au-delà des mots.
+            La communication avec nos animaux permet de créer un lien profond et harmonieux, en écoutant et en
+            comprenant
+            leurs
+            besoins, leurs émotions et leurs pensées. À travers des techniques intuitives et des méthodes respectueuses,
+            nous vous
+            offrons l'opportunité de renforcer cette relation, d'approfondir votre compréhension mutuelle et de
+            favoriser
+            un
+            bien-être partagé. Que vous soyez déjà en contact avec vos animaux ou simplement curieux, ce site est un
+            espace
+            d'apprentissage et de partage pour explorer l'art de la communication non verbale et émotionnelle entre
+            le gardien et ses
+            animaux.</p>
+      </article>
    </section>
-   <section class="news">
-      <h2>Derniers Posts</h2>
-   </section>
-</body>
+   <footer class="footer">
+      <div class="footer__socials">
+         <a href="#" class="footer__link"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+         <a href="#" class="footer__link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+      </div>
+      <p class="footer__copyright">&copy; 2024 Shadow - Tous droits réservés</p>
+   </footer>
 
 </html>
