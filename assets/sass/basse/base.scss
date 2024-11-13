@@ -1,4 +1,5 @@
 @use '../utils/utils' as utils;
+@use '../utils/mixins.scss' as mixins;
 
 /**** Typographie ****/
 @font-face {
@@ -70,8 +71,10 @@ section {
   width: 70%;
   font-family: utils.$text;
   font-size: 1.2em;
+  font-weight: 500;
   line-height: 40px;
   text-align: justify;
+  padding-bottom: 30px;
 }
 
 .welcome__posts {
@@ -79,4 +82,19 @@ section {
   display: flex;
   justify-content: center;
   gap: 100px;
+}
+
+/****code de la page biographie****/
+.welcome__place {
+  display: flex;
+  align-items: center;
+}
+
+.welcome__rabbit {
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 75%;
+  @include mixins.picture_shadow;
 }

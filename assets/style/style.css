@@ -62,8 +62,10 @@ section {
   width: 70%;
   font-family: "Open Sans", "serif";
   font-size: 1.2em;
+  font-weight: 500;
   line-height: 40px;
   text-align: justify;
+  padding-bottom: 30px;
 }
 
 .welcome__posts {
@@ -71,6 +73,21 @@ section {
   display: flex;
   justify-content: center;
   gap: 100px;
+}
+
+/****code de la page biographie****/
+.welcome__place {
+  display: flex;
+  align-items: center;
+}
+
+.welcome__rabbit {
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 75%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -168,7 +185,7 @@ nav .nav_link a:hover {
   font-size: 1.2em;
   font-weight: 700;
   color: #5b4f99;
-  margin-top: 30px;
+  margin-top: 60px;
   padding: 10px 30px;
   border: 4px solid #5b4f99;
   border-radius: 25px;
