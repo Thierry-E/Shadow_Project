@@ -163,4 +163,19 @@ nav .nav_link a:hover {
   text-underline-offset: 10px;
 }
 
+.cta {
+  font-family: "Open Sans", "serif";
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #5b4f99;
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: 4px solid #5b4f99;
+  border-radius: 25px;
+}
+.cta:hover {
+  background-color: #5b4f99;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
