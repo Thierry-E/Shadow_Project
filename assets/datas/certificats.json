@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "title": "Les Chakras chez l'Animal",
+    "description": "Ce certificat atteste des compétences acquises dans l’harmonisation des chakras chez les animaux, en utilisant des techniques de communication intuitive pour favoriser leur bien-être. Il permet de comprendre et d’équilibrer les énergies subtiles des animaux afin de soutenir leur santé physique, émotionnelle et spirituelle.",
+    "date": "20 Décembre 2023",
+    "src": "../../assets/img/certificats/chakras_animale.webp",
+    "thumbnail": "../../assets/img/certificats/chakras_animale_thumbnail.webp"
+  },
+
+  {
+    "id": 2,
+    "title": "Lithothérapie",
+    "description": "Ce diplôme atteste de la compétence à utiliser les pierres et cristaux pour harmoniser les énergies des animaux, favorisant leur bien-être physique, émotionnel et énergétique. Il couvre l'application des propriétés des cristaux afin de soutenir la guérison et l'équilibre des animaux",
+    "date": "07 Janvier 2024",
+    "src": "../../assets/img/certificats/Lithotherapie.webp",
+    "thumbnail": "../../assets/img/certificats/Lithotherapie_thumbnail.webp"
+  },
+
+  {
+    "id": 3,
+    "title": "Communication Animale en Autonomie",
+    "description": "Ce diplôme atteste de la capacité à pratiquer la communication animale de manière autonome, en utilisant des techniques intuitives et énergétiques pour établir un lien profond avec les animaux. Il permet d'identifier leurs besoins, émotions et états de santé, tout en favorisant leur bien-être global sans intervention extérieure.",
+    "date": "09 Mai 2024",
+    "src": "../../assets/img/certificats/communication_animale.webp",
+    "thumbnail": "../../assets/img/certificats/communication_animale_thumbnail.webp"
+  },
+
+  {
+    "id": 4,
+    "title": "Découverte du Pendule",
+    "description": "Ce diplôme atteste de la compréhension et de l'utilisation du pendule pour explorer les énergies subtiles, poser des questions et obtenir des réponses intuitives. Il permet d'apprendre les bases de la radiesthésie pour évaluer l'environnement énergétique et prendre des décisions éclairées.",
+    "date": "09 Mai 2024",
+    "src": "../../assets/img/certificats/decouverte-pendule.webp",
+    "thumbnail": "../../assets/img/certificats/decouverte_pendule-thumbnail.webp"
+  },
+
+  {
+    "id": 5,
+    "title": "Communication Animale",
+    "description": "Ce diplôme certifie les compétences en communication animale, permettant de comprendre et de dialoguer intuitivement avec les animaux pour identifier leurs émotions, besoins et états de santé. Il inclut l'utilisation de techniques énergétiques et empathiques pour renforcer le bien-être physique, émotionnel et comportemental des animaux.",
+    "date": "15 Juillet 2024",
+    "src": "../../assets/img/certificats/communication_animale2.webp",
+    "thumbnail": "../../assets/img/certificats/communication_animale2_thumbnail.webp"
+  },
+
+  {
+    "id": 6,
+    "title": "Utilisation du Pendule",
+    "description": "Ce diplôme certifie la capacité à utiliser le pendule pour renforcer la communication intuitive avec les animaux, en détectant et équilibrant leurs énergies subtiles. Il permet d'explorer les besoins, émotions et états de santé des animaux, tout en favorisant leur bien-être par des réponses précises et énergétiques.",
+    "date": "25 juillet 2024",
+    "src": "../../assets/img/certificats/pendule.webp",
+    "thumbnail": "../../assets/img/certificats/pendule_thumbnail.webp"
+  }
+]
