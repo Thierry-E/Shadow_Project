@@ -1,0 +1,64 @@
+@use '../utils/utils.scss' as utils;
+@use '../utils/mixins.scss' as mixins;
+
+.gallery {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .gallery__items {
+    width: 32%;
+    cursor: pointer;
+
+    h3 {
+      font-size: 1.5em;
+      text-align: center;
+      color: utils.$primary_color;
+      margin: 15px 0;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      @include mixins.gallery_shadow;
+    }
+  }
+  .gallery__overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include mixins.overlay_color;
+    z-index: 10;
+  }
+
+  .gallery__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    .gallery__close {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+      font-size: 1.8em;
+      background-color: utils.$fifth_color;
+      color: white;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

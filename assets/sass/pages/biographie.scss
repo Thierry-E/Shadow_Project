@@ -1,0 +1,15 @@
+@use '../utils/mixins.scss' as mixins;
+
+.bio {
+  display: flex;
+  align-items: center;
+}
+
+.bio__rabbit {
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 75%;
+  @include mixins.picture_shadow;
+}

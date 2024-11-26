@@ -4,6 +4,7 @@
 /****Variables des typographie****/
 /****Variables de couleurs****/
 /****Ombres****/
+/****Couleur de fond des overlays****/
 @font-face {
   font-family: "Daydream";
   src: url("../fonts/daydream_free-webfont.woff2") format("woff2"), url("../fonts/daydream_free-webfont.woff") format("woff"), url("../fonts/daydream_free-webfont.ttf") format("truetype"), url("../fonts/daydream_free-webfont.eot") format("eot");
@@ -41,7 +42,7 @@ section {
   margin: 50px 0;
 }
 
-.welcome {
+article {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -49,7 +50,7 @@ section {
   justify-content: center;
 }
 
-.welcome__title {
+h2 {
   font-family: "Daydream", "cursive";
   font-size: 3em;
   margin: 50px auto;
@@ -58,7 +59,8 @@ section {
   text-underline-offset: 15px;
 }
 
-.welcome__text {
+p,
+blockquote {
   width: 70%;
   font-family: "Open Sans", "serif";
   font-size: 1.2em;
@@ -68,26 +70,9 @@ section {
   padding-bottom: 30px;
 }
 
-.welcome__posts {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-}
-
-/****code de la page biographie****/
-.welcome__place {
-  display: flex;
-  align-items: center;
-}
-
-.welcome__rabbit {
-  float: left;
-  margin-right: 20px;
-  width: 220px;
-  height: auto;
-  border-radius: 75%;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+.citation {
+  font-weight: bold;
+  text-align: justify;
 }
 
 header {
@@ -193,6 +178,83 @@ header .header__title {
 .cta:hover {
   background-color: #5b4f99;
   color: #fff;
+}
+
+.welcome__posts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+}
+
+.bio__rabbit {
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 75%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.gallery .gallery__items {
+  width: 32%;
+  cursor: pointer;
+}
+.gallery .gallery__items h3 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #000;
+  margin: 15px 0;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+.gallery .gallery__items img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.gallery .gallery__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.gallery .gallery__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.gallery .gallery__modal .gallery__close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  font-size: 1.8em;
+  background-color: #ff00ff;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.gallery .gallery__modal img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
