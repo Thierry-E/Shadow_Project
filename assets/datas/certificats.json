@@ -40,13 +40,13 @@
     "title": "Communication Animale",
     "description": "Ce diplôme certifie les compétences en communication animale, permettant de comprendre et de dialoguer intuitivement avec les animaux pour identifier leurs émotions, besoins et états de santé. Il inclut l'utilisation de techniques énergétiques et empathiques pour renforcer le bien-être physique, émotionnel et comportemental des animaux.",
     "date": "15 Juillet 2024",
-    "src": "../../assets/img/certificats/communication_animale2.webp",
-    "thumbnail": "../../assets/img/certificats/communication_animale2_thumbnail.webp"
+    "src": "../assets/img/certificats/communication_animale2.webp",
+    "thumbnail": "../assets/img/certificats/communication_animale2_thumbnail.webp"
   },
 
   {
     "id": 6,
-    "title": "Utilisation du Pendule",
+    "title": "Utilisation du Pendule Autour de l'Animal",
     "description": "Ce diplôme certifie la capacité à utiliser le pendule pour renforcer la communication intuitive avec les animaux, en détectant et équilibrant leurs énergies subtiles. Il permet d'explorer les besoins, émotions et états de santé des animaux, tout en favorisant leur bien-être par des réponses précises et énergétiques.",
     "date": "25 juillet 2024",
     "src": "../../assets/img/certificats/pendule.webp",

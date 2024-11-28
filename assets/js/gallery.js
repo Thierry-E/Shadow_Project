@@ -25,8 +25,6 @@ fetch(certificats)
     return response.json()
   })
   .then((certificats) => {
-    adjustPathsForEnvironment(certificats)
-
     certificats.forEach((certificat) => {
       const items = document.createElement('div')
       items.classList.add('gallery__items')
