@@ -1,6 +1,8 @@
 /**** Code permettant d'appliquer une classe au lien du menu actif ****/
 
 /**** Variables globales ****/
+const isGitHubPages = window.location.hostname === 'Thierry-E.github.io' // Vérifie si on est sur GitHub Pages
+
 const menuLinks = document.querySelectorAll('.nav__link a') // Sélectionne tous les liens dans les éléments avec la classe 'nav__link'
 
 // Récupère le nom du fichier actuel dans l'URL (afin de faire la comparaison)

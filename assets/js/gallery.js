@@ -1,5 +1,7 @@
-// Détection de l'environnement (GitHub Pages ou local)
-const isGitHubPages = window.location.hostname === 'Thierry-E.github.io' // Vérifie si on est sur GitHub Pages
+//Variables globales
+
+// Récupération de l'élément div avec la classe "gallery" dans le DOM
+const gallery = document.querySelector('.gallery')
 
 // Fonction pour ajuster les chemins des images et du fichier JSON en fonction de l'environnement
 function adjustPathsForEnvironment(certificats) {
@@ -14,14 +16,10 @@ function adjustPathsForEnvironment(certificats) {
 
 // Fonction pour déterminer le chemin du fichier JSON en fonction de l'environnement
 function getCertificatsPath() {
-  // Pour GitHub Pages, le chemin sera avec le préfixe "/Shadow_Project", sinon, on laisse en relatif
   return isGitHubPages
     ? '/Shadow_Project/assets/datas/certificats.json'
     : './assets/datas/certificats.json'
 }
-
-// Récupération de l'élément div avec la classe "gallery" dans le DOM
-const gallery = document.querySelector('.gallery')
 
 // Obtention du chemin correct du fichier JSON
 const certificatsPath = getCertificatsPath()
@@ -34,26 +32,21 @@ fetch(certificatsPath)
     return response.json()
   })
   .then((certificats) => {
-    // Ajuster les chemins des images avant de les utiliser
     adjustPathsForEnvironment(certificats)
 
-    // Traitement des données : ajout des certificats dans la galerie
     certificats.forEach((certificat) => {
       const items = document.createElement('div')
       items.classList.add('gallery__items')
 
-      // Ajouter les données de chaque certificat
       items.innerHTML = `
         <h3>${certificat.title}</h3>
         <img src="${certificat.thumbnail}" alt="${certificat.title}">
       `
 
-      // Ajouter un écouteur d'événements pour afficher le certificat dans une modale lorsqu'on clique
       items.addEventListener('click', () => {
         viewCertificat(certificat)
       })
 
-      // Ajouter le certificat à la galerie
       gallery.appendChild(items)
     })
   })
@@ -80,13 +73,11 @@ function viewCertificat(certificat) {
   gallery.appendChild(galleryOverlay)
   gallery.appendChild(galleryModal)
 
-  // Fermer la modale au clic sur la croix
   galleryClose.addEventListener('click', () => {
     galleryModal.remove()
     galleryOverlay.remove()
   })
 
-  // Fermer la modale au clic sur l'overlay
   galleryOverlay.addEventListener('click', () => {
     galleryModal.remove()
     galleryOverlay.remove()
