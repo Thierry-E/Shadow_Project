@@ -13,7 +13,7 @@ function adjustPathsForEnvironment(certificats) {
 }
 
 // Import du fichier de données JSON (certificats)
-const certificatsPath = './assets/datas/certificats.json' // Chemin vers le fichier JSON
+const certificatsPath = './assets/datas/certificats.json'
 
 // Récupération de l'élément div avec la classe "gallery" dans le DOM
 const gallery = document.querySelector('.gallery')
