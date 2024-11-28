@@ -1,59 +1,51 @@
 // Détection de l'environnement (GitHub Pages ou local)
-const isGitHubPages = window.location.hostname === 'Thierry-E.github.io'
-// Fonction pour ajuster les chemins en fonction de l'environnement
-function adjustPathsForEnvironment() {
-  if (isGitHubPages) {
-    // Ajouter le préfixe du nom du dépôt pour GitHub Pages
-    const paths = document.querySelectorAll('link[href], script[src], img[src]')
-    paths.forEach((path) => {
-      let src = path.getAttribute('src') || path.getAttribute('href')
-      if (src && !src.startsWith('http')) {
-        const adjustedSrc = '/Shadow_Project' + src // Remplace '/Shadow_Project' par le nom de ton dépôt
-        path.setAttribute('src', adjustedSrc)
-        path.setAttribute('href', adjustedSrc)
-      }
-    })
-  }
+const isGitHubPages = window.location.hostname === 'Thierry-E.github.io' // Vérifie si on est sur GitHub Pages
+
+// Fonction pour ajuster les chemins des images en fonction de l'environnement
+function adjustPathsForEnvironment(certificats) {
+  const basePath = isGitHubPages ? '/Shadow_Project' : '' // Ajouter le préfixe pour GitHub Pages ou laisser vide pour le local
+
+  certificats.forEach((certificat) => {
+    // Ajuster les chemins des images pour chaque certificat
+    certificat.src = basePath + certificat.src
+    certificat.thumbnail = basePath + certificat.thumbnail
+  })
 }
 
-// Appel de la fonction pour ajuster les chemins
-adjustPathsForEnvironment()
-
 // Import du fichier de données JSON (certificats)
-const certificats = './assets/datas/certificats.json' // Ce chemin restera le même, ajusté par la fonction si nécessaire
+const certificatsPath = './assets/datas/certificats.json' // Chemin vers le fichier JSON
 
-// Récupération de l'élément Div avec la classe "gallery" dans le document HTML ou DOM.
+// Récupération de l'élément div avec la classe "gallery" dans le DOM
 const gallery = document.querySelector('.gallery')
 
-// Vérification de la récupération de l'élément div avec la classe "gallery" dans la console
-// console.log(gallery);
-
-fetch(certificats)
+fetch(certificatsPath)
   .then((response) => {
     if (!response.ok) {
-      throw new Error('Erreur de Chargement du fichier Json')
+      throw new Error('Erreur de Chargement du fichier JSON')
     }
     return response.json()
   })
   .then((certificats) => {
-    // Traitement des données
+    // Ajuster les chemins des images avant de les utiliser
+    adjustPathsForEnvironment(certificats)
+
+    // Traitement des données : ajout des certificats dans la galerie
     certificats.forEach((certificat) => {
-      // Création de la Div "items" contenant chaque certificat
       const items = document.createElement('div')
       items.classList.add('gallery__items')
 
-      // Ajout des données à la Div "items"
+      // Ajouter les données de chaque certificat
       items.innerHTML = `
         <h3>${certificat.title}</h3>
         <img src="${certificat.thumbnail}" alt="${certificat.title}">
       `
 
-      // Ajout d'un écouteur d'événements sur la div 'items'
+      // Ajouter un écouteur d'événements pour afficher le certificat dans une modale lorsqu'on clique
       items.addEventListener('click', () => {
         viewCertificat(certificat)
       })
 
-      // Ajout de la div "items" comme enfant à la div "gallery"
+      // Ajouter le certificat à la galerie
       gallery.appendChild(items)
     })
   })
@@ -61,39 +53,32 @@ fetch(certificats)
     console.log('Erreur :', error)
   })
 
-// Fonction pour ouvrir la modale comportant les certificats
+// Fonction pour afficher un certificat dans une modale
 function viewCertificat(certificat) {
-  // Création de l'overlay
   const galleryOverlay = document.createElement('div')
   galleryOverlay.classList.add('gallery__overlay')
 
-  // Création de la modale (fenêtre d'information)
   const galleryModal = document.createElement('div')
   galleryModal.classList.add('gallery__modal')
 
-  // Création de la croix de fermeture de la modale
   const galleryClose = document.createElement('i')
   galleryClose.classList.add('gallery__close', 'fa-solid', 'fa-xmark')
 
-  // Ajout du contenu de la modale
   galleryModal.innerHTML = `
     <img src="${certificat.src}" alt="${certificat.title}">
   `
 
-  // Ajout de la croix de fermeture à la modale
   galleryModal.appendChild(galleryClose)
-
-  // Ajout de la modale à la galerie
   gallery.appendChild(galleryOverlay)
   gallery.appendChild(galleryModal)
 
-  // Ajout d'un écouteur d'événements pour fermer la modale au clic sur la croix
+  // Fermer la modale au clic sur la croix
   galleryClose.addEventListener('click', () => {
     galleryModal.remove()
     galleryOverlay.remove()
   })
 
-  // Ajout d'un écouteur d'événements pour fermer la modale au clic sur l'overlay
+  // Fermer la modale au clic sur l'overlay
   galleryOverlay.addEventListener('click', () => {
     galleryModal.remove()
     galleryOverlay.remove()
