@@ -1,6 +1,5 @@
 // Détection de l'environnement (GitHub Pages ou local)
-const isGitHubPages = window.location.hostname === 'username.github.io' // Remplace 'username' par ton nom d'utilisateur GitHub
-
+const isGitHubPages = window.location.hostname === 'Thierry-E.github.io'
 // Fonction pour ajuster les chemins en fonction de l'environnement
 function adjustPathsForEnvironment() {
   if (isGitHubPages) {
