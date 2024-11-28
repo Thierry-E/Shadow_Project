@@ -1,22 +1,26 @@
-//Import du fichier json "projets"
+// Import du fichier JSON "projets"
 const certificats = './assets/datas/certificats.json'
 
-//Variables globales
-
-// Récupération de l'élément div avec la classe "gallery" dans le DOM
+// Variables globales
 const gallery = document.querySelector('.gallery')
 
-// Fonction pour ajuster les chemins en fonction de l'environnement
-function adjustPathsForEnvironment() {
+// Fonction pour ajuster les chemins des images en fonction de l'environnement
+function adjustPathsForGitHubPages(certificats) {
+  // Détection si nous sommes sur GitHub Pages (en fonction du hostname)
+  const isGitHubPages = window.location.hostname === 'username.github.io' // Remplacez 'username' par votre nom d'utilisateur GitHub
+
   if (isGitHubPages) {
-    // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant chaque chemin de ressource
-    menuLinks.forEach((link) => {
-      const href = link.getAttribute('href')
-      link.setAttribute('href', '/Shadow_Project' + href) // Prend en compte le nom du dépôt
+    // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant les chemins
+    const basePath = '/Shadow_Project' // Remplacez Shadow_Project par le nom de votre dépôt GitHub
+
+    certificats.forEach((certificat) => {
+      certificat.src = basePath + certificat.src
+      certificat.thumbnail = basePath + certificat.thumbnail
     })
   }
 }
 
+// Récupérer les certificats depuis le fichier JSON
 fetch(certificats)
   .then((response) => {
     if (!response.ok) {
@@ -25,6 +29,10 @@ fetch(certificats)
     return response.json()
   })
   .then((certificats) => {
+    // Ajuste les chemins des images en fonction de l'environnement
+    adjustPathsForGitHubPages(certificats)
+
+    // Création des éléments HTML pour chaque certificat
     certificats.forEach((certificat) => {
       const items = document.createElement('div')
       items.classList.add('gallery__items')
@@ -34,6 +42,7 @@ fetch(certificats)
         <img src="${certificat.thumbnail}" alt="${certificat.title}">
       `
 
+      // Écouteur d'événement pour afficher un certificat dans une modale
       items.addEventListener('click', () => {
         viewCertificat(certificat)
       })
