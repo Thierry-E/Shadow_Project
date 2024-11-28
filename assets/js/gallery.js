@@ -26,7 +26,7 @@ fetch(certificats)
     // Générer la galerie HTML
     certificats.forEach((certificat) => {
       const item = document.createElement('div')
-      item.classList.add('gallery__item')
+      item.classList.add('gallery__items')
 
       item.innerHTML = `
         <h3>${certificat.title}</h3>
