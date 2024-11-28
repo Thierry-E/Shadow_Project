@@ -7,15 +7,15 @@ const gallery = document.querySelector('.gallery')
 // Fonction pour ajuster les chemins des images en fonction de l'environnement
 function adjustPathsForGitHubPages(certificats) {
   // Détection si nous sommes sur GitHub Pages (en fonction du hostname)
-  const isGitHubPages = window.location.hostname === 'username.github.io' // Remplacez 'username' par votre nom d'utilisateur GitHub
+  const isGitHubPages = window.location.hostname === 'Thierry-E.github.io'
 
   if (isGitHubPages) {
     // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant les chemins
     const basePath = '/Shadow_Project' // Remplacez Shadow_Project par le nom de votre dépôt GitHub
 
     certificats.forEach((certificat) => {
-      certificat.src = basePath + certificat.src
-      certificat.thumbnail = basePath + certificat.thumbnail
+      certificat.src = basePath + certificat.src // Chemin complet de l'image
+      certificat.thumbnail = basePath + certificat.thumbnail // Chemin complet de la miniature
     })
   }
 }
