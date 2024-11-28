@@ -1,86 +1,67 @@
-// Import du fichier JSON "projets"
-const certificats = './assets/datas/certificats.json'
+const certificats = './assets/datas/certificats.json' // Chemin vers le fichier JSON
+const gallery = document.querySelector('.gallery') // Récupération du conteneur de la galerie
 
-// Variables globales
-const gallery = document.querySelector('.gallery')
+// Fonction pour ajuster les chemins d'images en fonction de l'environnement (local ou GitHub)
+function adjustPaths(certificats) {
+  // Vérifie si nous sommes sur GitHub Pages
+  const isGitHubPages = window.location.hostname.includes('github.io')
+  const basePath = isGitHubPages ? '/Shadow_Project' : '' // Si GitHub Pages, préfixe avec '/Shadow_Project'
 
-// Fonction pour ajuster les chemins des images en fonction de l'environnement
-function adjustPathsForGitHubPages(certificats) {
-  // Détection si nous sommes sur GitHub Pages
-  const isGitHubPages = window.location.hostname === 'Thierry-E.github.io'
-
-  if (isGitHubPages) {
-    // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant les chemins
-    const basePath = '/Shadow_Project'
-
-    // Parcourir chaque certificat et ajouter le préfixe de basePath
-    certificats.forEach((certificat) => {
-      certificat.src = basePath + certificat.src // Chemin complet pour l'image principale
-      certificat.thumbnail = basePath + certificat.thumbnail // Chemin complet pour la miniature
-    })
-  }
+  // Modifie les chemins des images
+  certificats.forEach((certificat) => {
+    certificat.src = basePath + certificat.src
+    certificat.thumbnail = basePath + certificat.thumbnail
+  })
 }
 
-// Récupérer les certificats depuis le fichier JSON
+// Récupérer le fichier JSON
 fetch(certificats)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('Erreur de Chargement du fichier JSON')
-    }
-    return response.json()
-  })
+  .then((response) => response.json())
   .then((certificats) => {
-    // Ajuste les chemins des images en fonction de l'environnement
-    adjustPathsForGitHubPages(certificats)
+    // Ajuste les chemins d'images pour GitHub Pages
+    adjustPaths(certificats)
 
-    // Création des éléments HTML pour chaque certificat
+    // Générer la galerie HTML
     certificats.forEach((certificat) => {
-      const items = document.createElement('div')
-      items.classList.add('gallery__items')
+      const item = document.createElement('div')
+      item.classList.add('gallery__item')
 
-      items.innerHTML = `
+      item.innerHTML = `
         <h3>${certificat.title}</h3>
         <img src="${certificat.thumbnail}" alt="${certificat.title}">
       `
 
-      // Écouteur d'événement pour afficher un certificat dans une modale
-      items.addEventListener('click', () => {
+      item.addEventListener('click', () => {
         viewCertificat(certificat)
       })
 
-      gallery.appendChild(items)
+      gallery.appendChild(item)
     })
   })
-  .catch((error) => {
-    console.log('Erreur :', error)
-  })
+  .catch((error) =>
+    console.error('Erreur de chargement du fichier JSON:', error)
+  )
 
 // Fonction pour afficher un certificat dans une modale
 function viewCertificat(certificat) {
-  const galleryOverlay = document.createElement('div')
-  galleryOverlay.classList.add('gallery__overlay')
+  const overlay = document.createElement('div')
+  overlay.classList.add('gallery__overlay')
+  const modal = document.createElement('div')
+  modal.classList.add('gallery__modal')
+  const close = document.createElement('i')
+  close.classList.add('gallery__close', 'fa-solid', 'fa-xmark')
 
-  const galleryModal = document.createElement('div')
-  galleryModal.classList.add('gallery__modal')
+  modal.innerHTML = `<img src="${certificat.src}" alt="${certificat.title}">`
+  modal.appendChild(close)
+  gallery.appendChild(overlay)
+  gallery.appendChild(modal)
 
-  const galleryClose = document.createElement('i')
-  galleryClose.classList.add('gallery__close', 'fa-solid', 'fa-xmark')
-
-  galleryModal.innerHTML = `
-    <img src="${certificat.src}" alt="${certificat.title}">
-  `
-
-  galleryModal.appendChild(galleryClose)
-  gallery.appendChild(galleryOverlay)
-  gallery.appendChild(galleryModal)
-
-  galleryClose.addEventListener('click', () => {
-    galleryModal.remove()
-    galleryOverlay.remove()
+  close.addEventListener('click', () => {
+    modal.remove()
+    overlay.remove()
   })
-
-  galleryOverlay.addEventListener('click', () => {
-    galleryModal.remove()
-    galleryOverlay.remove()
+  overlay.addEventListener('click', () => {
+    modal.remove()
+    overlay.remove()
   })
 }
