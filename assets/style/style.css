@@ -210,7 +210,7 @@ header .header__title {
   gap: 20px;
 }
 .gallery .gallery__items {
-  width: 32%;
+  width: calc(33.33% - 20px);
   cursor: pointer;
 }
 .gallery .gallery__items h3 {

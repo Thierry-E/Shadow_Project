@@ -10,7 +10,7 @@
   gap: 20px;
 
   .gallery__items {
-    width: 32%;
+    width: calc(33.33% - 20px);
     cursor: pointer;
 
     h3 {
