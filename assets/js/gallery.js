@@ -1,30 +1,12 @@
+//Import du fichier json "projets"
+const certificats = './assets/datas/certificats.json'
+
 //Variables globales
 
 // Récupération de l'élément div avec la classe "gallery" dans le DOM
 const gallery = document.querySelector('.gallery')
 
-// Fonction pour ajuster les chemins des images et du fichier JSON en fonction de l'environnement
-function adjustPathsForEnvironment(certificats) {
-  const basePath = isGitHubPages ? '/Shadow_Project' : '' // Ajouter le préfixe pour GitHub Pages ou laisser vide pour le local
-
-  certificats.forEach((certificat) => {
-    // Ajuster les chemins des images pour chaque certificat
-    certificat.src = basePath + certificat.src
-    certificat.thumbnail = basePath + certificat.thumbnail
-  })
-}
-
-// Fonction pour déterminer le chemin du fichier JSON en fonction de l'environnement
-function getCertificatsPath() {
-  return isGitHubPages
-    ? '/Shadow_Project/assets/datas/certificats.json'
-    : './assets/datas/certificats.json'
-}
-
-// Obtention du chemin correct du fichier JSON
-const certificatsPath = getCertificatsPath()
-
-fetch(certificatsPath)
+fetch(certificats)
   .then((response) => {
     if (!response.ok) {
       throw new Error('Erreur de Chargement du fichier JSON')
