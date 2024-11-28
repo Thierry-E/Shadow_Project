@@ -4,8 +4,8 @@
     "title": "Les Chakras chez l'Animal",
     "description": "Ce certificat atteste des compétences acquises dans l’harmonisation des chakras chez les animaux, en utilisant des techniques de communication intuitive pour favoriser leur bien-être. Il permet de comprendre et d’équilibrer les énergies subtiles des animaux afin de soutenir leur santé physique, émotionnelle et spirituelle.",
     "date": "20 Décembre 2023",
-    "src": "/public/chakras_animale_thumbnail.webp",
-    "thumbnail": "../../assets/img/certificats/chakras_animale_thumbnail.webp"
+    "src": "/assets/img/certificats/chakras_animale.webp",
+    "thumbnail": "/assets/img/certificats/chakras_animale_thumbnail.webp"
   },
 
   {
