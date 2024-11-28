@@ -50,3 +50,4 @@ function setActiveMenuLinks() {
 
 /****Appel de la fonction****/
 setActiveMenuLinks()
+adjustPathsForEnvironment()
