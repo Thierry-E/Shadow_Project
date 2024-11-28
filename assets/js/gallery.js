@@ -1,7 +1,7 @@
 // Détection de l'environnement (GitHub Pages ou local)
 const isGitHubPages = window.location.hostname === 'Thierry-E.github.io' // Vérifie si on est sur GitHub Pages
 
-// Fonction pour ajuster les chemins des images en fonction de l'environnement
+// Fonction pour ajuster les chemins des images et du fichier JSON en fonction de l'environnement
 function adjustPathsForEnvironment(certificats) {
   const basePath = isGitHubPages ? '/Shadow_Project' : '' // Ajouter le préfixe pour GitHub Pages ou laisser vide pour le local
 
@@ -12,11 +12,19 @@ function adjustPathsForEnvironment(certificats) {
   })
 }
 
-// Import du fichier de données JSON (certificats)
-const certificatsPath = './assets/datas/certificats.json'
+// Fonction pour déterminer le chemin du fichier JSON en fonction de l'environnement
+function getCertificatsPath() {
+  // Pour GitHub Pages, le chemin sera avec le préfixe "/Shadow_Project", sinon, on laisse en relatif
+  return isGitHubPages
+    ? '/Shadow_Project/assets/datas/certificats.json'
+    : './assets/datas/certificats.json'
+}
 
 // Récupération de l'élément div avec la classe "gallery" dans le DOM
 const gallery = document.querySelector('.gallery')
+
+// Obtention du chemin correct du fichier JSON
+const certificatsPath = getCertificatsPath()
 
 fetch(certificatsPath)
   .then((response) => {
