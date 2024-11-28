@@ -5,9 +5,11 @@ const gallery = document.querySelector('.gallery') // Récupération du conteneu
 function adjustPaths(certificats) {
   // Vérifie si nous sommes sur GitHub Pages
   const isGitHubPages = window.location.hostname.includes('github.io')
+
+  // Si sur GitHub Pages, on ajoute /Shadow_Project à chaque chemin d'image
   const basePath = isGitHubPages ? '/Shadow_Project' : '' // Si GitHub Pages, préfixe avec '/Shadow_Project'
 
-  // Modifie les chemins des images
+  // Modifie les chemins des images dans le fichier JSON
   certificats.forEach((certificat) => {
     certificat.src = basePath + certificat.src
     certificat.thumbnail = basePath + certificat.thumbnail
