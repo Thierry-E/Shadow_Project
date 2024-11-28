@@ -6,6 +6,17 @@ const certificats = './assets/datas/certificats.json'
 // Récupération de l'élément div avec la classe "gallery" dans le DOM
 const gallery = document.querySelector('.gallery')
 
+// Fonction pour ajuster les chemins en fonction de l'environnement
+function adjustPathsForEnvironment() {
+  if (isGitHubPages) {
+    // Si nous sommes sur GitHub Pages, ajouter /Shadow_Project/ avant chaque chemin de ressource
+    menuLinks.forEach((link) => {
+      const href = link.getAttribute('href')
+      link.setAttribute('href', '/Shadow_Project' + href) // Prend en compte le nom du dépôt
+    })
+  }
+}
+
 fetch(certificats)
   .then((response) => {
     if (!response.ok) {
