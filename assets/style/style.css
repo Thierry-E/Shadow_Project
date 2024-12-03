@@ -216,7 +216,8 @@ header .header__title {
   cursor: pointer;
 }
 .gallery .gallery__items h3 {
-  font-size: 1.5em;
+  font-family: "Open Sans", "serif";
+  font-size: 1.3em;
   text-align: center;
   color: #000;
   margin: 15px 0;
@@ -257,6 +258,50 @@ header .header__title {
 }
 .gallery .gallery__modal img {
   width: 100%;
+}
+
+.tarifsContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarifsContent .tarifsContent__list {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans", "serif";
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.tarifsContent .tarifsContent__list .tarifsContent--list-Title {
+  display: flex;
+  flex-direction: column;
+  line-height: 28px;
+  margin-right: 10px;
+}
+.tarifsContent .tarifsContent__list .tarifsContent--list-Title span {
+  font-size: 1em;
+  font-style: italic;
+  margin: 0 0 20px 0;
+}
+.tarifsContent .tarifsContent__list .tarifsContent__list-line {
+  flex-grow: 1;
+  border-bottom: 2px dotted #000;
+  margin: 0 10px;
+  padding-top: 15px;
+}
+.tarifsContent .tarifsContent__list .tarifsContent__list-price {
+  font-weight: bold;
+  padding: 5px 0 0 5px;
+}
+
+.remark {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
