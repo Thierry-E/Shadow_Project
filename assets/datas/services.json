@@ -1,0 +1,29 @@
+[
+  {
+    "id": "S1",
+    "title": "Radiésthésie",
+    "picture": "/assets/img/pendule.png",
+    "description": "La radiesthésie animale permet d’analyser les énergies subtiles de votre animal pour détecter des déséquilibres et rééquilibrer ses chakras. Elle aide à localiser les sources de stress, de douleur ou de mal-être, même pour les animaux disparus. En cas de perte, elle permet de savoir si l’animal a été recueilli, d’évaluer son état émotionnel, et de déterminer les lieux à proximité où il a pu se trouver. Cette pratique offre aussi un accompagnement énergétique pour rétablir son harmonie. Pour les humains, elle permet de poser des questions oui/non, d'établir des dates et de mesurer le taux vibratoire."
+  },
+
+  {
+    "id": "S2",
+    "title": "Accompagnement Energétique",
+    "picture": "/assets/img/cristaux.png",
+    "description": "L'accompagnement énergétique aide à rétablir l'équilibre énergétique de votre animal en travaillant sur ses blocages émotionnels, physiques ou environnementaux. Grâce à des techniques subtiles, nous soutenons votre compagnon dans son processus de guérison, en favorisant une meilleure circulation de l'énergie et un bien-être durable."
+  },
+
+  {
+    "id": "S3",
+    "title": "Tirage D'Oracle",
+    "picture": "/assets/img/carte.png",
+    "description": "Le tirage d'Oracle est une méthode intuitive qui permet de recevoir des messages et des conseils spirituels pour votre animal. À travers les cartes, nous explorons les énergies et les messages subtils qui entourent votre compagnon, pour mieux comprendre ses besoins, ses émotions ou les situations auxquelles il fait face. Ce tirage offre une guidance précieuse pour renforcer le lien entre vous et votre animal."
+  },
+
+  {
+    "id": "S4",
+    "title": "Communication Animale",
+    "picture": "/assets/img/chien_chat.png",
+    "description": "La communication animale permet d’établir une connexion directe avec votre animal, en recevant ses messages, ses ressentis et ses besoins. Grâce à l’intuition et à l’écoute profonde, nous pouvons comprendre ce qu’il vit, ses émotions, ses préoccupations, et même ses désirs. Ce service vous aide à résoudre des problèmes comportementaux, à apaiser des tensions, ou simplement à renforcer le lien de complicité et de confiance entre vous et votre compagnon."
+  }
+]
