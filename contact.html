@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Insertion Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--Fin insertion Fnt Awesome-->
+   <link rel="stylesheet" href="./assets/style/style.css">
+   <title>Tarifs</title>
+</head>
+
+<body>
+   <header class="header">
+      <img src="./assets/img/logo.png" alt="Logo de Sahadow" id="logo">
+      <h1 class="header__title">Shadow - Communication Animale</h1>
+   </header>
+
+   <nav class="nav">
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./index.html">Accueil</a>
+      </div>
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./biographie.html">Biographie</a>
+      </div>
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./services.html">Services</a>
+      </div>
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./certificats.html">Certificats</a>
+      </div>
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./tarifs.html">Tarifs</a>
+      </div>
+      <div class="nav__link">
+         <img src="./assets/img/rabbit-feet.png" alt="Image de pattes de lapin">
+         <a href="./contact.html">Contact</a>
+      </div>
+   </nav>
+   <section>
+      <h2>Contactez-Moi</h2>
+      <p>Vous avez des questions ou souhaitez en savoir plus sur la communication avec votre animal ? N’hésitez pas à
+         me
+         contacter ! Je suis à votre écoute pour répondre à vos besoins spécifiques, que ce soit pour une
+         consultation,
+         des
+         conseils personnalisés ou des informations supplémentaires. Remplissez simplement ce formulaire, et je vous
+         répondrai
+         dans les plus brefs délais. Votre relation avec votre animal est unique, et je suis ici pour vous
+         accompagner
+         dans cette
+         aventure enrichissante.</p>
+
+      <form>
+         <img src="./assets/img/fairie.png" alt="Image d'un papillon Violet.">
+         <fieldset>
+            <legend>Informations Personnelles</legend>
+            <div class="form__group">
+               <label for="name">Nom :</label>
+               <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form__group">
+               <label for="firstname">Prénom:</label>
+               <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form__group">
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" required>
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>Information sur votre Animal</legend>
+            <div class="form__group">
+               <label for="date">Date de naissance ou de décès : </label>
+               <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form__group">
+               <label for="statut">Animal Vivant ou décédé ?</label>
+               <select name="statut" id="statut" required>
+                  <option value="Vivant"> Vivant</option>
+                  <option value="Decede">Décédé</option>
+               </select>
+            </div>
+            <div class="form__group">
+               <label for="file">Joindre une photo de votre animal : </label>
+               <input type="file" id="file" name="file" class="custom-file-input">
+               <label for="file" class="custom-file-label">Choisir un fichier...</label>
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>Consentement</legend>
+            <div class="form__group form__checkbox">
+               <label for="consent"></label>
+               <input type="checkbox" id="consent" name="consent" value="oui" required>
+               j'accepte que des informations concernant mon animal soient partagées sur les réseaux sociaux.
+            </div>
+         </fieldset>
+         <div class="form__submit">
+            <input type="submit" value="Envoyer">
+         </div>
+      </form>
+   </section>
+   <footer class="footer">
+      <div class="footer__socials">
+         <a href="#" class="footer__link"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+         <a href="#" class="footer__link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+      </div>
+      <p class="footer__copyright">&copy; 2024 Shadow - Tous droits réservés</p>
+   </footer>
+   <script src="./assets/js/menu.js"></script>
+</body>
+
+</html>

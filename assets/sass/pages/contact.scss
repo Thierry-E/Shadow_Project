@@ -1,0 +1,135 @@
+@use '../utils/utils.scss' as utils;
+
+form {
+  width: 70%;
+  padding: 20px;
+  border: 3px dotted utils.$fourth_color;
+  border-radius: 7px;
+  position: relative;
+  margin-top: 100px;
+
+  img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -141px;
+    left: -121px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  fieldset {
+    font-family: utils.$text;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: utils.$fourth_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 0 0 15px 15px;
+    border: 2px dotted utils.$fourth_color;
+
+    legend {
+      margin: 0 10px 15px 10px;
+    }
+
+    .form__group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin: 8px 0;
+      }
+
+      input,
+      select {
+        width: 300px;
+        height: 30px;
+        font-size: 1em;
+      }
+
+      // Règle pour masquer le champ "fichier" et le champ checkbox par défaut.
+      .custom-file-input {
+        display: none;
+      }
+
+      // Création d'un champ "fichier" personnalisé
+
+      .custom-file-label {
+        width: 300px;
+        display: block;
+        padding: 10px 20px;
+        background-color: utils.$fourth_color;
+        color: utils.$secondary_color;
+        font-size: 0.8em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+      }
+
+      /* Création d'une case à cocher personalisée */
+
+      input[type='checkbox'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border: 2px solid utils.$fourth_color;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        margin-right: 10px;
+      }
+
+      /* Lorsque la case est cochée */
+      input[type='checkbox']:checked {
+        background-color: utils.$fourth_color;
+        border-color: utils.$fourth_color;
+      }
+
+      /* Ajouter la coche à l'intérieur de la case lorsqu'elle est cochée */
+      input[type='checkbox']:checked::after {
+        content: '✓';
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        top: -4px;
+        left: 3px;
+      }
+    }
+
+    .form__checkbox {
+      flex-direction: row;
+    }
+  }
+
+  .form__submit {
+    display: flex;
+    justify-content: center;
+
+    input[type='submit'] {
+      width: 15%;
+      padding: 10px;
+      background-color: utils.$fourth_color;
+      color: utils.$secondary_color;
+      font-family: utils.$text;
+      font-size: 1.1em;
+      font-weight: bold;
+      outline-color: utils.$fourth_color;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type='submit']:hover {
+      background-color: utils.$secondary_color;
+      color: utils.$fourth_color;
+    }
+  }
+}
