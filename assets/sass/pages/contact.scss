@@ -1,5 +1,25 @@
 @use '../utils/utils.scss' as utils;
 
+.calendly {
+  color: utils.$fourth_color;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  gap: 50px;
+}
+
+.socials a {
+  font-size: 2em;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
 form {
   width: 70%;
   padding: 20px;
@@ -40,6 +60,14 @@ form {
 
       label {
         margin: 8px 0;
+      }
+
+      #request {
+        width: 500px;
+        height: 150px;
+        font-family: utils.$text;
+        font-size: 1em;
+        padding: 10px;
       }
 
       input,

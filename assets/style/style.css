@@ -427,6 +427,26 @@ header .header__title {
   text-decoration-thickness: 3px;
 }
 
+.calendly {
+  color: #5b4f99;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  gap: 50px;
+}
+
+.socials a {
+  font-size: 2em;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
 form {
   width: 70%;
   padding: 20px;
@@ -468,6 +488,13 @@ form fieldset .form__group {
 }
 form fieldset .form__group label {
   margin: 8px 0;
+}
+form fieldset .form__group #request {
+  width: 500px;
+  height: 150px;
+  font-family: "Open Sans", "serif";
+  font-size: 1em;
+  padding: 10px;
 }
 form fieldset .form__group input,
 form fieldset .form__group select {

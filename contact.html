@@ -47,19 +47,39 @@
    </nav>
    <section>
       <h2>Contactez-Moi</h2>
-      <p>Vous avez des questions ou souhaitez en savoir plus sur la communication avec votre animal ? N’hésitez pas à
-         me
-         contacter ! Je suis à votre écoute pour répondre à vos besoins spécifiques, que ce soit pour une
-         consultation,
-         des
-         conseils personnalisés ou des informations supplémentaires. Remplissez simplement ce formulaire, et je vous
-         répondrai
-         dans les plus brefs délais. Votre relation avec votre animal est unique, et je suis ici pour vous
-         accompagner
-         dans cette
-         aventure enrichissante.</p>
+      <p>
+         Vous avez des questions ou souhaitez en apprendre davantage sur la communication avec votre animal ? N'hésitez
+         pas à me
+         contacter ! Je suis disponible pour répondre à vos besoins spécifiques, que ce soit pour une consultation, des
+         conseils
+         personnalisés ou des informations supplémentaires. Il vous suffit de remplir ce formulaire et je reviendrai
+         vers vous
+         dans les plus brefs délais. Votre relation avec votre animal est unique, et je suis là pour vous accompagner
+         tout au
+         long de cette aventure enrichissante.
+      </p>
 
-      <form>
+      <p>
+         Pour compléter ce formulaire, merci d’ajouter une photo de votre animal sous forme de lien, que vous aurez
+         préalablement
+         hébergée sur un service gratuit. Le lien devra être inséré dans le champ "Votre Demande".
+
+         Pour prendre rendez-vous, veuillez consulter mon <a href="https://calendly.com/shadow-communication."
+            target="_blank" class="calendly">Agenda</a>.
+      </p>
+
+      <p>Pour me suivre, vous pouvez me retrouver sur les réseaux sociaux Instagram et TikTok en utilisant les liens
+         ci-dessous :
+      <div class="socials">
+         <a href="https://www.instagram.com/shadow.communication_/?igsh=bTgyNHBieG55Z3dh#" target="_blank"
+            class="footer__link"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+         <a href="https://www.tiktok.com/@passeuse_d.ames" target="_blank" class="footer__link"><i
+               class="fa-brands fa-tiktok"></i>
+            Tiktok</a>
+      </div>
+      </p>
+
+      <form id="contact__form">
          <img src="./assets/img/fairie.png" alt="Image d'un papillon Violet.">
          <fieldset>
             <legend>Informations Personnelles</legend>
@@ -75,6 +95,10 @@
                <label for="email">Email :</label>
                <input type="email" id="email" name="email" required>
             </div>
+            <div class="form__group">
+               <label for="request">Votre Demande :</label>
+               <textarea name="request" id="request"></textarea>
+            </div>
          </fieldset>
          <fieldset>
             <legend>Information sur votre Animal</legend>
@@ -88,11 +112,6 @@
                   <option value="Vivant"> Vivant</option>
                   <option value="Decede">Décédé</option>
                </select>
-            </div>
-            <div class="form__group">
-               <label for="file">Joindre une photo de votre animal : </label>
-               <input type="file" id="file" name="file" class="custom-file-input">
-               <label for="file" class="custom-file-label">Choisir un fichier...</label>
             </div>
          </fieldset>
          <fieldset>
@@ -110,12 +129,16 @@
    </section>
    <footer class="footer">
       <div class="footer__socials">
-         <a href="#" class="footer__link"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
-         <a href="#" class="footer__link"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+         <a href="https://www.instagram.com/shadow.communication_/?igsh=bTgyNHBieG55Z3dh#" class="footer__link"><i
+               class="fa-brands fa-square-instagram"></i> Instagram</a>
+         <a href="https://www.tiktok.com/@passeuse_d.ames" class="footer__link"><i class="fa-brands fa-tiktok"></i>
+            Tiktok</a>
       </div>
       <p class="footer__copyright">&copy; 2024 Shadow - Tous droits réservés</p>
    </footer>
    <script src="./assets/js/menu.js"></script>
+   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <script src="./assets/js/contact.js"></script>
 </body>
 
 </html>
