@@ -6,13 +6,36 @@ header {
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   #logo {
     width: 370px;
     padding-right: 50px;
+
+    @media screen and (max-width: 1024px) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 250px;
+      padding-top: 30px;
+      padding-right: 0;
+    }
   }
 
   .header__title {
     font-family: utils.$title;
     font-size: 4em;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3.5em;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.2em;
+      text-align: center;
+    }
   }
 }

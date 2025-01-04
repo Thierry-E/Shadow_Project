@@ -76,6 +76,12 @@ blockquote {
   line-height: 40px;
   text-align: justify;
   padding-bottom: 30px;
+
+  @media screen and (max-width: 1024px) {
+    width: 85%;
+    font-size: 1em;
+    line-height: 35px;
+  }
 }
 
 .citation {
