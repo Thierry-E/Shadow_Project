@@ -3,6 +3,10 @@
 .bio {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .bio__rabbit {
@@ -12,4 +16,9 @@
   height: auto;
   border-radius: 75%;
   @include mixins.picture_shadow;
+
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    margin-bottom: 20px;
+  }
 }
