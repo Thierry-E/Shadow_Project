@@ -312,6 +312,16 @@ header .header__title {
   width: calc(33.33% - 20px);
   cursor: pointer;
 }
+@media screen and (max-width: 1024px) {
+  .gallery .gallery__items {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery .gallery__items {
+    width: 100%;
+  }
+}
 .gallery .gallery__items h3 {
   font-family: "Open Sans", "serif";
   font-size: 1.3em;
@@ -321,6 +331,11 @@ header .header__title {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
+}
+@media screen and (max-width: 768px) {
+  .gallery .gallery__items h3 {
+    font-size: 1.2em;
+  }
 }
 .gallery .gallery__items img {
   width: 100%;
@@ -343,6 +358,13 @@ header .header__title {
   transform: translate(-50%, -50%);
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .gallery .gallery__modal {
+    border: 2px solid red;
+    width: 90%;
+    left: 48%;
+  }
+}
 .gallery .gallery__modal .gallery__close {
   position: absolute;
   top: 35px;
@@ -352,6 +374,13 @@ header .header__title {
   color: white;
   border-radius: 5px;
   padding: 5px;
+}
+@media screen and (max-width: 768px) {
+  .gallery .gallery__modal .gallery__close {
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+  }
 }
 .gallery .gallery__modal img {
   width: 100%;
@@ -377,16 +406,31 @@ header .header__title {
   line-height: 28px;
   margin-right: 10px;
 }
+@media screen and (max-width: 768px) {
+  .tarifsContent .tarifsContent__list .tarifsContent--list-Title h3 {
+    font-size: 1em;
+  }
+}
 .tarifsContent .tarifsContent__list .tarifsContent--list-Title span {
   font-size: 1em;
   font-style: italic;
   margin: 0 0 20px 0;
+}
+@media screen and (max-width: 768px) {
+  .tarifsContent .tarifsContent__list .tarifsContent--list-Title span {
+    font-size: 0.9em;
+  }
 }
 .tarifsContent .tarifsContent__list .tarifsContent__list-line {
   flex-grow: 1;
   border-bottom: 2px dotted #000;
   margin: 0 10px;
   padding-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .tarifsContent .tarifsContent__list .tarifsContent__list-line {
+    border-bottom: 0;
+  }
 }
 .tarifsContent .tarifsContent__list .tarifsContent__list-price {
   font-weight: bold;
@@ -429,6 +473,7 @@ header .header__title {
 @media screen and (max-width: 1024px) {
   .services .service_Card {
     width: 40%;
+    min-height: 250px;
   }
 }
 @media screen and (max-width: 768px) {

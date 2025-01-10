@@ -13,6 +13,14 @@
     width: calc(33.33% - 20px);
     cursor: pointer;
 
+    @media screen and (max-width: 1024px) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
     h3 {
       font-family: utils.$text;
       font-size: 1.3em;
@@ -22,6 +30,10 @@
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 6px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.2em;
+      }
     }
 
     img {
@@ -47,6 +59,12 @@
     transform: translate(-50%, -50%);
     z-index: 100;
 
+    @media screen and (max-width: 768px) {
+      border: 2px solid red;
+      width: 90%;
+      left: 48%;
+    }
+
     .gallery__close {
       position: absolute;
       top: 35px;
@@ -56,6 +74,12 @@
       color: white;
       border-radius: 5px;
       padding: 5px;
+
+      @media screen and (max-width: 768px) {
+        top: 10px;
+        right: 10px;
+        font-size: 1.2em;
+      }
     }
 
     img {
