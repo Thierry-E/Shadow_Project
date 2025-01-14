@@ -615,9 +615,20 @@ header .header__title {
   display: flex;
   gap: 50px;
 }
+@media screen and (max-width: 768px) {
+  .socials {
+    width: 100%;
+    margin-left: 55px;
+  }
+}
 
 .socials a {
   font-size: 2em;
+}
+@media screen and (max-width: 768px) {
+  .socials a {
+    font-size: 1.6em;
+  }
 }
 
 .socials a:hover {
@@ -634,6 +645,11 @@ form {
   position: relative;
   margin-top: 100px;
 }
+@media screen and (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+}
 form img {
   width: 200px;
   height: auto;
@@ -641,6 +657,13 @@ form img {
   position: absolute;
   top: -141px;
   left: -121px;
+}
+@media screen and (max-width: 768px) {
+  form img {
+    width: 150px;
+    top: -120px;
+    left: -10px;
+  }
 }
 form fieldset {
   font-family: "Open Sans", "serif";
@@ -654,11 +677,16 @@ form fieldset {
   padding: 0 0 15px 15px;
   border: 2px dotted #5b4f99;
 }
+@media screen and (max-width: 768px) {
+  form fieldset {
+    font-size: 1.1em;
+  }
+}
 form fieldset legend {
   margin: 0 10px 15px 10px;
 }
 form fieldset .form__group {
-  width: 100%;
+  width: 87%;
   display: flex;
   flex-direction: column;
   /* Création d'une case à cocher personalisée */
@@ -669,17 +697,28 @@ form fieldset .form__group label {
   margin: 8px 0;
 }
 form fieldset .form__group #request {
-  width: 500px;
+  width: 450px;
   height: 150px;
   font-family: "Open Sans", "serif";
   font-size: 1em;
   padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  form fieldset .form__group #request {
+    width: 100%;
+  }
 }
 form fieldset .form__group input,
 form fieldset .form__group select {
   width: 300px;
   height: 30px;
   font-size: 1em;
+}
+@media screen and (max-width: 768px) {
+  form fieldset .form__group input,
+  form fieldset .form__group select {
+    width: 100%;
+  }
 }
 form fieldset .form__group .custom-file-input {
   display: none;
@@ -698,9 +737,6 @@ form fieldset .form__group .custom-file-label {
   margin-bottom: 10px;
 }
 form fieldset .form__group input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 25px;
   height: 25px;
   background-color: white;
@@ -710,6 +746,11 @@ form fieldset .form__group input[type=checkbox] {
   position: relative;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   margin-right: 10px;
+}
+@media screen and (max-width: 1024px) {
+  form fieldset .form__group input[type=checkbox] {
+    width: 30px;
+  }
 }
 form fieldset .form__group input[type=checkbox]:checked {
   background-color: #5b4f99;
@@ -722,6 +763,11 @@ form fieldset .form__group input[type=checkbox]:checked::after {
   position: absolute;
   top: -4px;
   left: 3px;
+}
+@media screen and (max-width: 1024px) {
+  form fieldset .form__group input[type=checkbox]:checked::after {
+    left: 0;
+  }
 }
 form fieldset .form__checkbox {
   flex-direction: row;
@@ -742,9 +788,15 @@ form .form__submit input[type=submit] {
   border: none;
   border-radius: 5px;
 }
+@media screen and (max-width: 768px) {
+  form .form__submit input[type=submit] {
+    width: 100%;
+  }
+}
 form .form__submit input[type=submit]:hover {
   background-color: #fff;
   color: #5b4f99;
+  border: 2px solid #5b4f99;
 }
 
 /*# sourceMappingURL=style.css.map */
