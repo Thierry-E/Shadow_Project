@@ -71,7 +71,7 @@ blockquote {
   font-size: 1.2em;
   font-weight: 500;
   line-height: 40px;
-  text-align: justify;
+  text-align: left;
   padding-bottom: 30px;
 }
 @media screen and (max-width: 1024px) {
@@ -624,6 +624,7 @@ header .header__title {
 
 .socials a {
   font-size: 2em;
+  color: #5b4f99;
 }
 @media screen and (max-width: 768px) {
   .socials a {
@@ -737,8 +738,9 @@ form fieldset .form__group .custom-file-label {
   margin-bottom: 10px;
 }
 form fieldset .form__group input[type=checkbox] {
-  width: 25px;
-  height: 25px;
+  appearance: none;
+  width: 30px;
+  height: 30px;
   background-color: white;
   border: 2px solid #5b4f99;
   border-radius: 4px;
@@ -758,19 +760,31 @@ form fieldset .form__group input[type=checkbox]:checked {
 }
 form fieldset .form__group input[type=checkbox]:checked::after {
   content: "✓";
-  color: white;
+  color: #fff;
   font-size: 1em;
   position: absolute;
-  top: -4px;
-  left: 3px;
+  top: -3px;
+  left: 5px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   form fieldset .form__group input[type=checkbox]:checked::after {
-    left: 0;
+    font-size: 1.2em;
+    left: 5px;
   }
 }
 form fieldset .form__checkbox {
-  flex-direction: row;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  form fieldset .form__checkbox {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  form fieldset .form__checkbox {
+    flex-direction: column;
+  }
 }
 form .form__submit {
   display: flex;

@@ -17,6 +17,7 @@
 
 .socials a {
   font-size: 2em;
+  color: utils.$fourth_color;
 
   @media screen and (max-width: 768px) {
     font-size: 1.6em;
@@ -132,8 +133,9 @@ form {
       /* Création d'une case à cocher personalisée */
 
       input[type='checkbox'] {
-        width: 25px;
-        height: 25px;
+        appearance: none;
+        width: 30px;
+        height: 30px;
         background-color: white;
         border: 2px solid utils.$fourth_color;
         border-radius: 4px;
@@ -156,20 +158,30 @@ form {
       /* Ajouter la coche à l'intérieur de la case lorsqu'elle est cochée */
       input[type='checkbox']:checked::after {
         content: '✓';
-        color: white;
+        color: utils.$secondary_color;
         font-size: 1em;
         position: absolute;
-        top: -4px;
-        left: 3px;
+        top: -3px;
+        left: 5px;
 
-        @media screen and (max-width: 1024px) {
-          left: 0;
+        @media screen and (max-width: 768px) {
+          font-size: 1.2em;
+          left: 5px;
         }
       }
     }
 
     .form__checkbox {
-      flex-direction: row;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
     }
   }
 
